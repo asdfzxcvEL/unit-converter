@@ -9,8 +9,12 @@ const length2 = document.getElementById("length-2")
 const volume = document.getElementById("volume")
 const volume2 = document.getElementById("volume-2")
 const mass = document.getElementById("mass")
+const numInput = document.getElementById("num-input")
 
 btn.addEventListener("click", function() {
+
+    numInput.value = ''
+
     length.innerHTML = `${numInput.value} meters = ${(numInput.value * 3.281).toFixed(3)} feet | ${numInput.value} feet = ${(numInput.value / 3.281).toFixed(3)} meters`
     
     length2.innerHTML = `${numInput.value} kilometers = ${(numInput.value * 0.621).toFixed(3)} miles | ${numInput.value} miles = ${(numInput.value / 0.621).toFixed(3)} kilometers`
@@ -19,7 +23,7 @@ btn.addEventListener("click", function() {
     
     volume2.innerHTML = `${numInput.value} milliliters = ${(numInput.value * 0.034).toFixed(3)} ounces | ${numInput.value} ounces = ${(numInput.value / 0.034).toFixed(3)} milliliters`
 
-    mass.innerHTML = `${numInput.value} kilos = ${(numInput.value * 2.204).toFixed(3)} pounds | ${numInput.value} pounds = ${(numInput.value / 2.204).toFixed(3)} kilos`
+    mass.innerHTML = `${numInput.value} kilograms = ${(numInput.value * 2.204).toFixed(3)} pounds | ${numInput.value} pounds = ${(numInput.value / 2.204).toFixed(3)} kilograms`
 })
 
 
